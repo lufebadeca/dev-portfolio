@@ -1,0 +1,236 @@
+export const translations = {
+  en: {
+    // Navbar
+    nav: {
+      home: "Home",
+      technologies: "Technologies",
+      projects: "Projects",
+      experience: "Experience",
+      about: "About",
+      contact: "Contact",
+    },
+    // Hero
+    hero: {
+      title: "Full-Stack JavaScript Developer",
+      subtitle: "Building modern web applications with Node.js, React, Next.js & AI Tools",
+      downloadCV: "Download CV",
+      contactMe: "Contact Me",
+      viewProjects: "View Projects",
+    },
+    // Technologies
+    tech: {
+      title: "Technologies & Tools",
+      subtitle: "Experienced with modern technologies and AI-powered development tools",
+    },
+    // Projects
+    projects: {
+      title: "Featured Projects",
+      subtitle: "Showcasing my recent work and technical expertise",
+      seeMore: "See More",
+      description: "Description",
+      techStack: "Tech Stack",
+      keyFeatures: "Key Features",
+      liveDemo: "Live Demo",
+      viewCode: "View Code",
+    },
+    // Experience
+    experience: {
+      title: "Experience & Skills",
+      subtitle: "Professional journey and technical expertise",
+      workExperience: "Work Experience",
+      technicalSkills: "Technical Skills",
+      jobs: [
+        {
+          title: "Full-Stack developer",
+          company: "Mapptech SAS",
+          period: "2025 - currently",
+          responsibilities: [
+            "Developed scalable web applications using React, Node.js, Next.js, PostgreSQL, and Convex.",
+            "Integrated AI tools to accelerate the development workflow by 40%.",
+            "Participated in sprint planning cycles as a Full-Stack Developer in an Agile team.",
+            "Implemented CI/CD pipelines using Docker and GitHub Actions."
+          ],
+        },
+        {
+          title: "Programming Tutor",
+          company: "Tech centre",
+          period: "2025 - currently",
+          responsibilities: [
+            "Provided individual and group support to students in developing their programming projects with JS and React.",
+            "Offered technical mentoring, debugging support, and occasional class leadership to reinforce key concepts.",
+            "Developed educational content to facilitate the learning of programming concepts.",
+          ],
+        },
+        {
+          title: "Freelance Developer",
+          company: "Independent",
+          period: "2025 - currently",
+          responsibilities: [
+            "Created responsive user interfaces with React and Next.js",
+            "Implemented modern design systems using Tailwind CSS",
+            "Co-created navigation flow and user experience for diverse clients",
+          ],
+        },
+      ],
+      skillCategories: [
+        { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+        { category: "Backend", items: ["Node.js", "Express", "GraphQL", "REST APIs"] },
+        { category: "Databases", items: ["PostgreSQL", "MongoDB", "Firebase", "Convex"] },
+        { category: "DevOps", items: ["Docker", "Git", "CI/CD", "Azure DevOps"] },
+        { category: "AI Tools", items: ["Bolt", "Lovable", "Cursor", "Windsurf"] },
+      ],
+    },
+    // About
+    about: {
+      title: "About Me",
+      subtitle: "Passionate about building exceptional digital experiences",
+      paragraph1: "I'm a passionate Full-Stack JavaScript Developer with over 1 year of experience building modern web applications. My expertise spans the entire JavaScript ecosystem, from crafting intuitive user interfaces with React and Next.js to developing robust backend services with Node.js.",
+      paragraph2: "I specialize in creating scalable, production-ready applications using cutting-edge technologies. My experience includes working with various databases (PostgreSQL, MongoDB, Firestore, Convex), implementing real-time features, and integrating third-party services.",
+      paragraph3: "What sets me apart is my ability to leverage AI-powered development tools like Bolt, Lovable, Cursor, and Windsurf to accelerate development workflows while maintaining high code quality. I'm also proficient in DevOps practices, including Docker containerization and CI/CD pipelines.",
+      paragraph4: "When I'm not coding, I enjoy contributing to open-source projects, staying updated with the latest web technologies, and sharing my knowledge through technical blog posts and mentoring.",
+      stats: {
+        experience: "Years Experience",
+        projects: "Projects Completed",
+        technologies: "Technologies",
+        satisfaction: "Client Satisfaction",
+      },
+    },
+    // Contact
+    contact: {
+      title: "Get In Touch",
+      subtitle: "Have a project in mind? Let's work together",
+      letsConnect: "Let's Connect",
+      description: "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+      namePlaceholder: "Your Name",
+      emailPlaceholder: "Your Email",
+      messagePlaceholder: "Your Message",
+      sendButton: "Send Message",
+      sending: "Sending...",
+      successTitle: "Message sent!",
+      successDescription: "Thank you for reaching out. I'll get back to you soon.",
+    },
+    // Footer
+    footer: {
+      copyright: "Luis Baldovino's Portfolio. All rights reserved.",
+      builtWith: "Built with",
+      using: "using React, TypeScript & Tailwind CSS",
+    },
+  },
+  es: {
+    // Navbar
+    nav: {
+      home: "Inicio",
+      technologies: "Tecnologías",
+      projects: "Proyectos",
+      experience: "Experiencia",
+      about: "Acerca de",
+      contact: "Contacto",
+    },
+    // Hero
+    hero: {
+      title: "Desarrollador Full-Stack JavaScript",
+      subtitle: "Desarrollo de aplicaciones web modernas con Node.js, React, Next.js y Herramientas de IA",
+      downloadCV: "Descargar CV",
+      contactMe: "Contáctame",
+      viewProjects: "Ver Proyectos",
+    },
+    // Technologies
+    tech: {
+      title: "Tecnologías y Herramientas",
+      subtitle: "Experiencia con tecnologías modernas y herramientas de desarrollo impulsadas por IA",
+    },
+    // Projects
+    projects: {
+      title: "Proyectos Destacados",
+      subtitle: "Un poco de mi trabajo reciente y experiencia técnica",
+      seeMore: "Ver Más",
+      description: "Descripción",
+      techStack: "Stack Tecnológico",
+      keyFeatures: "Características Clave",
+      liveDemo: "Demo en Vivo",
+      viewCode: "Ver Código",
+    },
+    // Experience
+    experience: {
+      title: "Experiencia y Habilidades",
+      subtitle: "Trayectoria profesional y experiencia técnica",
+      workExperience: "Experiencia Laboral",
+      technicalSkills: "Habilidades Técnicas",
+      jobs: [
+        {
+          title: "Desarrollador Full-Stack",
+          company: "Mapptech SAS",
+          period: "2025 - Presente",
+          responsibilities: [
+            "Desarrollé aplicaciones web escalables usando React, Node.js, Next.js y PostgreSQL y Convex",
+            "Integré herramientas de IA para acelerar el flujo de trabajo de desarrollo en un 40%",
+            "Participé en la planificación de diversos ciclos de sprints como desarrollador full-stack en un equipo ágil",
+            "Implementé pipelines de CI/CD con Docker y GitHub Actions",
+          ],
+        },
+        {
+          title: "Tutor de programación básica",
+          company: "Tech centre",
+          period: "2025 - Presente",
+          responsibilities: [
+            "Brindo acompañamiento individual y grupal a estudiantes en el desarrollo de sus proyectos de programación con JS y React",
+            "Mentoría técnica, apoyo en debugging y ocasional liderazgo de clases para reforzar conceptos clave.",
+            "Desarrollé contenido didáctico para facilitar el aprendizaje de conceptos de programación.",
+          ],
+        },
+        {
+          title: "Desarrollador Freelance",
+          company: "Independiente",
+          period: "2025 - Presente",
+          responsibilities: [
+            "Creé interfaces de usuario responsivas con React y Next.js",
+            "Implementé sistemas de diseño modernos usando Tailwind CSS",
+            "Cocreé el flujo de navegación y experiencia del usuario de clientes diversos",
+          ],
+        },
+      ],
+      skillCategories: [
+        { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+        { category: "Backend", items: ["Node.js", "Express", "GraphQL", "REST APIs"] },
+        { category: "Bases de Datos", items: ["PostgreSQL", "MongoDB", "Firebase", "Convex"] },
+        { category: "DevOps", items: ["Docker", "Git", "CI/CD", "Azure DevOps"] },
+        { category: "Herramientas IA", items: ["Bolt", "Lovable", "Cursor", "Windsurf"] },
+      ],
+    },
+    // About
+    about: {
+      title: "Acerca de Mí",
+      subtitle: "Apasionado por construir experiencias digitales excepcionales",
+      paragraph1: "Soy un Desarrollador Full-Stack JavaScript apasionado con más de 1 año de experiencia construyendo aplicaciones web modernas. Mi experiencia abarca todo el ecosistema de JavaScript, desde la creación de interfaces de usuario intuitivas con React y Next.js hasta el desarrollo de servicios backend robustos con Node.js.",
+      paragraph2: "Me especializo en crear aplicaciones escalables y listas para producción usando tecnologías de vanguardia. Mi experiencia incluye trabajar con varias bases de datos (PostgreSQL, MongoDB, Firestore, Convex), implementar funciones en tiempo real e integrar servicios de terceros.",
+      paragraph3: "Lo que me distingue es mi capacidad para aprovechar herramientas de desarrollo impulsadas por IA como Bolt, Lovable, Cursor y Windsurf para acelerar los flujos de trabajo de desarrollo manteniendo alta calidad de código. También estoy familiarizado con prácticas DevOps, incluyendo contenedorización con Docker y pipelines de CI/CD.",
+      paragraph4: "Cuando no estoy programando, disfruto contribuir a proyectos de código abierto, mantenerme actualizado con las últimas tecnologías web y compartir mi conocimiento a través de publicaciones de blogs técnicos y mentoría.",
+      stats: {
+        experience: "Años de Experiencia",
+        projects: "Proyectos Completados",
+        technologies: "Tecnologías",
+        satisfaction: "Satisfacción del Cliente",
+      },
+    },
+    // Contact
+    contact: {
+      title: "Ponte en Contacto",
+      subtitle: "¿Tienes un proyecto en mente? Trabajemos juntos",
+      letsConnect: "Conectemos",
+      description: "Siempre estoy interesado en conocer nuevos proyectos y oportunidades. Ya sea que tengas una pregunta o solo quieras saludar, ¡no dudes en contactarme!",
+      namePlaceholder: "Tu Nombre",
+      emailPlaceholder: "Tu Email",
+      messagePlaceholder: "Tu Mensaje",
+      sendButton: "Enviar Mensaje",
+      sending: "Enviando...",
+      successTitle: "¡Mensaje enviado!",
+      successDescription: "Gracias por contactarme. Te responderé pronto.",
+    },
+    // Footer
+    footer: {
+      copyright: "Portafolio de Luis Baldovino. Todos los derechos reservados.",
+      builtWith: "Hecho con",
+      using: "usando React, TypeScript y Tailwind CSS",
+    },
+  },
+};
