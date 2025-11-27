@@ -6,6 +6,7 @@ import { Experience } from "@/components/Experience";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <About />
       <Contact />
       <Footer />
+      <ChatWidget />
     </div>
   );
 };

@@ -113,7 +113,7 @@ export const translations = {
     footer: {
       copyright: "Luis Baldovino's Portfolio. All rights reserved.",
       builtWith: "Built with",
-      using: "using React, TypeScript & Tailwind CSS",
+      using: "using React, TypeScript, Tailwind CSS & Powered by Gemini AI",
     },
   },
   es: {

@@ -29,8 +29,16 @@ export function Contact() {
         title: t.successTitle,
         description: t.successDescription,
       });
+      const greet = language === "en" ? "Hello, Luis" : "Hola, Luis";
+      const namePart = formData.name ? `My name is ${formData.name}. ` : "";
+      const emailPart = formData.email ? `You can reach me at ${formData.email}. ` : "";
+      const messagePart = formData.message ? `Here is my message: ${formData.message}` : "";
+      formData.message = `${greet}! ${namePart}${emailPart}${messagePart}`;
+      const baseURL = `https://wa.me/${+573017470755}`;
+      const action_url = formData.message ? `${baseURL}?text=${encodeURIComponent(formData.message)}` : baseURL;
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);
+      window.open(action_url, "_blank");
     }, 1000);
   };
 
