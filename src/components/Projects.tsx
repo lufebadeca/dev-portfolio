@@ -47,15 +47,15 @@ export function Projects() {
               <div className="aspect-video overflow-hidden">
                 <img
                   src={project.thumbnail}
-                  alt={project.title}
+                  alt={project.title[language]}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                 />
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2">{project.title[language]}</h3>
                 <p className="text-muted-foreground mb-4 line-clamp-2">
-                  {project.shortDescription}
+                  {project.shortDescription[language]}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">

@@ -5,6 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/data/projects";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/data/translations";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -22,21 +23,37 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
+          <DialogTitle className="text-2xl font-bold">{project.title[language]}</DialogTitle>
         </DialogHeader>
 
         <div className="space-y-6">
-          <div className="rounded-lg overflow-hidden">
-            <img
-              src={project.thumbnail}
-              alt={project.title}
-              className="w-full h-auto object-cover"
-            />
-          </div>
+          {project.images.length > 1 ? (
+  <Carousel className="w-full">
+    <CarouselContent>
+      {project.images.map((image, index) => (
+        <CarouselItem key={index}>
+          <img
+            src={image}
+            alt={`${project.title[language]} - ${index + 1}`}
+            className="w-full h-auto object-cover rounded-lg"
+          />
+        </CarouselItem>
+      ))}
+    </CarouselContent>
+    <CarouselPrevious className="left-4" />
+    <CarouselNext className="right-4" />
+  </Carousel>
+) : (
+  <img
+    src={project.images[0]}
+    alt={project.title[language]}
+    className="w-full h-auto object-cover rounded-lg"
+  />
+)}
 
           <div>
             <h3 className="text-lg font-semibold mb-2">{t.description}</h3>
-            <p className="text-muted-foreground">{project.description}</p>
+            <p className="text-muted-foreground">{project.description[language]}</p>
           </div>
 
           <div>
@@ -53,7 +70,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           <div>
             <h3 className="text-lg font-semibold mb-3">{t.keyFeatures}</h3>
             <ul className="space-y-2">
-              {project.features.map((feature, index) => (
+              {project.features[language].map((feature, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
                   <span className="text-muted-foreground">{feature}</span>

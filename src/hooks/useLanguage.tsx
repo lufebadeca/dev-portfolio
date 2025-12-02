@@ -3,9 +3,11 @@ import type { ReactNode } from "react";
 
 export type Language = "en" | "es";
 
+
 type LanguageContextValue = {
   language: Language;
   toggleLanguage: () => void;
+  changeLanguage: (lang: Language) => void;
 };
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
@@ -35,8 +37,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     setLanguage((prev) => (prev === "en" ? "es" : "en"));
   };
 
+  const changeLanguage = (lang: Language) => {
+    setLanguage(lang);
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, changeLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

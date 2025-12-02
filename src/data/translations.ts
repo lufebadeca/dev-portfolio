@@ -73,10 +73,10 @@ export const translations = {
         },
       ],
       skillCategories: [
-        { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-        { category: "Backend", items: ["Node.js", "Express", "GraphQL", "REST APIs"] },
-        { category: "Databases", items: ["PostgreSQL", "MongoDB", "Firebase", "Convex"] },
-        { category: "DevOps", items: ["Docker", "Git", "CI/CD", "Azure DevOps"] },
+        { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn"] },
+        { category: "Backend", items: ["Node.js", "Express", "Firebase", "Supabase", "REST APIs", "Convex"] },
+        { category: "Databases", items: ["PostgreSQL", "MongoDB", "Firebase", "Supabase", "Convex"] },
+        { category: "DevOps", items: ["Docker", "Git", "Azure DevOps", "CI/CD"] },
         { category: "AI Tools", items: ["Bolt", "Lovable", "Cursor", "Windsurf"] },
       ],
     },
@@ -84,9 +84,9 @@ export const translations = {
     about: {
       title: "About Me",
       subtitle: "Passionate about building exceptional digital experiences",
-      paragraph1: "I'm a passionate Full-Stack JavaScript Developer with over 1 year of experience building modern web applications. My expertise spans the entire JavaScript ecosystem, from crafting intuitive user interfaces with React and Next.js to developing robust backend services with Node.js.",
+      paragraph1: "I'm a passionate Full-Stack JavaScript Developer with over 1 year of experience building modern web applications using agile methodologies and colaborative environments such as Github and Azure Devops. My expertise spans the entire JavaScript ecosystem, from crafting intuitive user interfaces with React and Next.js to developing robust backend services with Node.js.",
       paragraph2: "I specialize in creating scalable, production-ready applications using cutting-edge technologies. My experience includes working with various databases (PostgreSQL, MongoDB, Firestore, Convex), implementing real-time features, and integrating third-party services.",
-      paragraph3: "What sets me apart is my ability to leverage AI-powered development tools like Bolt, Lovable, Cursor, and Windsurf to accelerate development workflows while maintaining high code quality. I'm also proficient in DevOps practices, including Docker containerization and CI/CD pipelines.",
+      paragraph3: "What sets me apart is my ability to leverage AI-powered development tools like Bolt, Lovable, Cursor, and Windsurf to accelerate development workflows while maintaining high code quality. I'm also familiar with Docker containerization.",
       paragraph4: "When I'm not coding, I enjoy contributing to open-source projects, staying updated with the latest web technologies, and sharing my knowledge through technical blog posts and mentoring.",
       stats: {
         experience: "Years Experience",
@@ -113,7 +113,9 @@ export const translations = {
     footer: {
       copyright: "Luis Baldovino's Portfolio. All rights reserved.",
       builtWith: "Built with",
-      using: "using React, TypeScript, Tailwind CSS & Powered by Gemini AI",
+      using: "using",
+      usedTools: "React, TypeScript, Tailwind CSS",
+      poweredBy: "Powered by Gemini AI",
     },
   },
   es: {
@@ -201,9 +203,9 @@ export const translations = {
     about: {
       title: "Acerca de Mí",
       subtitle: "Apasionado por construir experiencias digitales excepcionales",
-      paragraph1: "Soy un Desarrollador Full-Stack JavaScript apasionado con más de 1 año de experiencia construyendo aplicaciones web modernas. Mi experiencia abarca todo el ecosistema de JavaScript, desde la creación de interfaces de usuario intuitivas con React y Next.js hasta el desarrollo de servicios backend robustos con Node.js.",
+      paragraph1: "Soy un Desarrollador Full-Stack JavaScript apasionado con más de 1 año de experiencia construyendo aplicaciones web modernas usando metodologías ágiles y entornos colaborativos como Github y Azure Devops. Mi experiencia abarca todo el ecosistema de JavaScript, desde la creación de interfaces de usuario intuitivas con React y Next.js hasta el desarrollo de servicios backend robustos con Node.js.",
       paragraph2: "Me especializo en crear aplicaciones escalables y listas para producción usando tecnologías de vanguardia. Mi experiencia incluye trabajar con varias bases de datos (PostgreSQL, MongoDB, Firestore, Convex), implementar funciones en tiempo real e integrar servicios de terceros.",
-      paragraph3: "Lo que me distingue es mi capacidad para aprovechar herramientas de desarrollo impulsadas por IA como Bolt, Lovable, Cursor y Windsurf para acelerar los flujos de trabajo de desarrollo manteniendo alta calidad de código. También estoy familiarizado con prácticas DevOps, incluyendo contenedorización con Docker y pipelines de CI/CD.",
+      paragraph3: "Lo que me distingue es mi capacidad para aprovechar herramientas de desarrollo impulsadas por IA como Bolt, Lovable, Cursor y Windsurf para acelerar los flujos de trabajo de desarrollo manteniendo alta calidad de código. También estoy familiarizado con contenedorización con Docker.",
       paragraph4: "Cuando no estoy programando, disfruto contribuir a proyectos de código abierto, mantenerme actualizado con las últimas tecnologías web y compartir mi conocimiento a través de publicaciones de blogs técnicos y mentoría.",
       stats: {
         experience: "Años de Experiencia",
@@ -230,7 +232,9 @@ export const translations = {
     footer: {
       copyright: "Portafolio de Luis Baldovino. Todos los derechos reservados.",
       builtWith: "Hecho con",
-      using: "usando React, TypeScript y Tailwind CSS",
+      usedTools: "React, TypeScript, Tailwind CSS & Powered by Gemini AI",
+      using: "usando",
+      poweredBy: "Powered by Gemini AI",
     },
   },
 };

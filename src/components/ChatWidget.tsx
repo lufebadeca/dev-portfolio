@@ -26,29 +26,31 @@ REGLAS DE COMPORTAMIENTO (IMPORTANTE):
 3. Si el usuario pregunta por secciones específicas, proporciona el enlace en formato Markdown: [Texto del enlace](#id_seccion).
 4. IDs de secciones disponibles: #home (Inicio), #technologies (Tecnologías), #projects (Proyectos), #experience (Experiencia), #about (Sobre mí), #contact (Contacto).
 
-INFORMACIÓN DE Luis:
+INFORMACIÓN DE LUIS:
 - Perfil: ${t.about.paragraph1, t.about.paragraph2, t.about.paragraph3, t.about.paragraph4}
 - Ubicación: Barranquilla, Colombia.
 - Disponibilidad: Abierto a oportunidades freelance y tiempo completo.
 - Habilidades: JavaScript, TypeScript, React, Tailwind CSS, Node.js, Firebase, Python, Gemini API.
 - Proyectos Destacados:
-  1. "E-Commerce Ultra": Una tienda online con Next.js y Stripe.
-  2. "ChatGenius": App de chat en tiempo real usando Socket.io.
-  3. "TaskMaster": Gestor de tareas con IA integrada.
+  1. "Bauly AI": Una plataforma especializad en coleccionismo de nicho con funcionalidades de red social.
+  2. "Neat English": Plataforma de aprendizaje de inglés especializada en pronunciación para hispanohablantes.
+  3. "Loan/Credit Proyector": una aplicación web para calcular y proyectar montos totales y cuotas de crédito e inversión.
+  4. "Ahorcado": Juego de palabras multi-temático.
 - Contacto: correo electronico: lufebadeca@gmail.com, LinkedIn: https://www.linkedin.com/in/fernando-baldovino-bdc GitHub: https://github.com/lufebadeca
+- Otros intereses: senderismo, ecoturismo, buceo, ejercicio al aire libre
 
 EJEMPLOS DE RESPUESTA:
 Usuario: "¿Cómo puedo contactar a Luis Fernando?"
 Tú: "Puedes escribirle a lufebadeca@gmail.com o visitar la sección de [Contacto](#contact)."
 
 Usuario: "¿Qué tecnologías domina?"
-Tú: "Luis Fernando es competente en JavaScript, TypeScript, React, Tailwind CSS, Node.js, Firebase y Python. Puedes ver más detalles en la sección de [Tecnologías](#technologies)."
+Tú: "Luis Fernando es competente en JavaScript, TypeScript, React, Tailwind CSS, Node.js, Next.js, Firebase, Supabase y MongoDB. Puedes ver más detalles en la sección de [Tecnologías](#technologies)."
 
 Usuario: "Háblame de su experiencia laboral"
 Tú: ${t.experience.jobs.map(job => `- ${job.title} en ${job.company} (${job.period})`).join('\n')} Puedes ver más detalles en la sección de [Experiencia](#experience)."
 
 Usuario: "Muéstrame sus proyectos"
-Tú: "Luis Fernando ha trabajado en proyectos como E-Commerce Ultra y ChatGenius. Puedes ver más detalles en la sección de [Proyectos](#projects)."
+Tú: "Luis Fernando ha trabajado en proyectos como Bauly AI y Neat English. Puedes ver más detalles en la sección de [Proyectos](#projects)."
 `;
 
   // Auto-scroll al final del chat
@@ -256,7 +258,8 @@ Tú: "Luis Fernando ha trabajado en proyectos como E-Commerce Ultra y ChatGenius
             {/* Header */}
             <div className="bg-slate-800 p-4 border-b border-slate-700 flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <Bot className="text-teal-400" size={20} />
+                <img src="/chatbot.png" alt="Chatbot" width={24} height={24} />
+                {/* <Bot className="text-teal-400" size={20} /> */}
                 <span className="font-bold text-slate-200">Asistente Virtual</span>
               </div>
               <button onClick={toggleChat} className="text-slate-400 hover:text-white transition-colors">
@@ -271,8 +274,8 @@ Tú: "Luis Fernando ha trabajado en proyectos como E-Commerce Ultra y ChatGenius
                   <div 
                     className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${
                       msg.role === 'user' 
-                        ? 'bg-teal-600 text-white rounded-br-none' 
-                        : 'bg-slate-800 text-slate-200 rounded-bl-none border border-slate-700'
+                        ? 'bg-primary text-white rounded-br-none' 
+                        : 'bg-slate-700 text-slate-200 rounded-bl-none border border-slate-700'
                     }`}
                   >
                     {msg.role === 'model' ? renderMessageText(msg.text) : msg.text}
@@ -296,7 +299,7 @@ Tú: "Luis Fernando ha trabajado en proyectos como E-Commerce Ultra y ChatGenius
               <input 
                 type="text" 
                 placeholder="Pregunta algo..." 
-                className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-teal-500 transition-colors"
+                className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-primary transition-colors"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
@@ -304,7 +307,7 @@ Tú: "Luis Fernando ha trabajado en proyectos como E-Commerce Ultra y ChatGenius
               <button 
                 onClick={handleSendMessage}
                 disabled={isLoading || !inputValue.trim()}
-                className="bg-teal-500 hover:bg-teal-600 disabled:opacity-50 disabled:cursor-not-allowed text-slate-900 p-2 rounded-xl transition-colors"
+                className="bg-primary hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed text-slate-900 p-2 rounded-xl transition-colors"
               >
                 <Send size={18} />
               </button>
@@ -315,9 +318,9 @@ Tú: "Luis Fernando ha trabajado en proyectos como E-Commerce Ultra y ChatGenius
         {/* Toggle Button */}
         <button 
           onClick={toggleChat}
-          className={`${isChatOpen ? 'bg-slate-700' : 'bg-teal-500 hover:bg-teal-400'} text-white p-4 rounded-full shadow-lg shadow-teal-500/30 transition-all duration-300 transform hover:scale-110 flex items-center justify-center`}
+          className={`${isChatOpen ? 'bg-slate-700' : 'bg-primary/70 hover:bg-primary/80'} text-white p-4 rounded-full shadow-lg shadow-teal-500/30 transition-all duration-300 transform hover:scale-110 flex items-center justify-center`}
         >
-          {isChatOpen ? <X size={24} /> : <MessageCircle size={24} fill="currentColor" />}
+           {isChatOpen ? <X size={24} /> :<img src="/chatbot.webp" alt="Chatbot" width={24} height={24} />} {/* <MessageCircle size={24} fill="currentColor" />} */}
         </button>
       </div>;
 }

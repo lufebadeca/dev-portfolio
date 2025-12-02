@@ -16,8 +16,8 @@ export function Hero() {
   const handleDownloadCV = () => {
     const cvUrl =
       language === "en"
-        ? "https://drive.google.com/file/d/1MD0B21B6mFpPWylrT9lRxeuGesT3mBXz/view?usp=drive_link"
-        : "https://drive.google.com/file/d/1xeKWBKguXceNCD_xcDKveJTnLLObffJh/view?usp=drive_link";
+        ? "https://drive.google.com/file/d/19U4CqjC_sND4XFN7XFVEwg98XCsiIOCi/view?usp=sharing"
+        : "https://drive.google.com/file/d/1NXgYB_NXTU9uAibke9c5L-hAd8NyLOVL/view?usp=sharing";
     window.open(cvUrl, "_blank");
   }
 

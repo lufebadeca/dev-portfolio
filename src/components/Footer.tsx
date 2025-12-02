@@ -11,14 +11,23 @@ export function Footer() {
     <footer className="py-8 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-muted-foreground text-center md:text-left">
             © {currentYear} {t.copyright}
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>{t.builtWith}</span>
-            <Lightbulb className="h-4 w-4 text-warning fill-warning" />
-            <span>{t.using}</span>
+          <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <span className="whitespace-nowrap">{t.builtWith}</span>
+              <Lightbulb className="h-4 w-4 text-warning fill-warning flex-shrink-0" />
+              <span className="whitespace-nowrap">{t.using}</span>
+            </div>
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <span className="whitespace-nowrap">{t.usedTools}</span>
+            </div>
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <span className="whitespace-nowrap">{`&`}</span>
+              <span className="whitespace-nowrap">{t.poweredBy}</span>
+            </div>
           </div>
         </div>
       </div>

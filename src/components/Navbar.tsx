@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/data/translations";
+import { Menu, X, Settings } from "lucide-react";
 
 export function Navbar() {
   const { language } = useLanguage();
@@ -47,10 +47,17 @@ export function Navbar() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl font-bold"
+            className="text-xl font-bold flex items-center gap-2"
           >
+            <div className="flex justify-center items-center h-8">
+                    <img 
+                      src="/chatbot.webp" 
+                      alt="Profile" 
+                      className="max-h-full max-w-full object-contain hover:scale-110 transition-transform"
+                    />
+                  </div>
             <span className="text-primary">{"<"}</span>
-            JS Developer
+            Lufebadeca
             <span className="text-primary">{"/>"}</span>
           </motion.div>
 

@@ -1,10 +1,25 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
+    keyframes: {
+		'scroll': {
+			'0%': { transform: 'translateX(0)' },
+			'100%': { transform: 'translateX(calc(-100% - 1rem))' },
+		},
+		'reverse-scroll': {
+			'0%': { transform: 'translateX(calc(-100% + 1rem))' },
+			'100%': { transform: 'translateX(0)' },
+		},
+    },
+    animation: {
+      'scroll': 'scroll 40s linear infinite',
+      'reverse-scroll': 'reverse-scroll 40s linear infinite',
+    },
   	container: {
   		center: true,
   		padding: '2rem',
@@ -86,8 +101,9 @@ export default {
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			'fade-in': 'fade-in 0.6s ease-out',
   			'slide-in-right': 'slide-in-right 0.6s ease-out',
-  			'scroll': 'scroll 30s linear infinite',
-  			'float': 'float 3s ease-in-out infinite'
+  			'float': 'float 3s ease-in-out infinite',
+  			'scroll': 'scroll 40s linear infinite',
+			'reverse-scroll': 'reverse-scroll 40s linear infinite'
   		},
   		fontFamily: {
   			sans: [
@@ -126,5 +142,5 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

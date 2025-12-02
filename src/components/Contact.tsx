@@ -118,7 +118,7 @@ export function Contact() {
                   placeholder={t.emailPlaceholder}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
+                  // required
                   className="bg-card"
                 />
               </div>
