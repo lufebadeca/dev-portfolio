@@ -258,7 +258,7 @@ Tú: "Luis Fernando ha trabajado en proyectos como Bauly AI y Neat English. Pued
             {/* Header */}
             <div className="bg-slate-800 p-4 border-b border-slate-700 flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <img src="/chatbot.png" alt="Chatbot" width={24} height={24} />
+                <img src="/chatbot.webp" alt="Chatbot" width={24} height={24} />
                 {/* <Bot className="text-teal-400" size={20} /> */}
                 <span className="font-bold text-slate-200">Asistente Virtual</span>
               </div>
