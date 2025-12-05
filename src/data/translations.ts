@@ -109,6 +109,11 @@ export const translations = {
       successTitle: "Message sent!",
       successDescription: "Thank you for reaching out. I'll get back to you soon.",
     },
+    // Chat
+    chat: {
+      initialMessage: "Hello! I'm Luis Fernando's assistant. How can I help you today? I can take you to his projects or tell you about his experience.",
+      placeholder: "Ask something...",
+    },
     // Footer
     footer: {
       copyright: "Luis Baldovino's Portfolio. All rights reserved.",
@@ -227,6 +232,11 @@ export const translations = {
       sending: "Enviando...",
       successTitle: "¡Mensaje enviado!",
       successDescription: "Gracias por contactarme. Te responderé pronto.",
+    },
+    // Chat
+    chat: {
+      initialMessage: "¡Hola! Soy el asistente de Luis Fernando. ¿Cómo puedo ayudarte hoy? Puedo llevarte a sus proyectos o contarte sobre su experiencia.",
+      placeholder: "Pregunta algo...",
     },
     // Footer
     footer: {

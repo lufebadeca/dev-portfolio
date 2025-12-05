@@ -13,10 +13,10 @@ export default function AnimatedChatEntrance({ onAnimationComplete }: AnimatedCh
   const { language } = useLanguage();
 
   useEffect(() => {
-    // Start animation sequence
+    // Start animation sequence with better timing
     const timeline = [
       { delay: 500, stage: 'transforming' as const },
-      { delay: 2500, stage: 'moving' as const },
+      { delay: 2200, stage: 'moving' as const },  // Start moving earlier for smooth overlap
       { delay: 4000, stage: 'complete' as const },
     ];
 
@@ -63,9 +63,9 @@ export default function AnimatedChatEntrance({ onAnimationComplete }: AnimatedCh
           style={{
             width: stage === 'moving' || stage === 'complete' ? '56px' : '140px',
             height: stage === 'moving' || stage === 'complete' ? '56px' : '140px',
-            transition: stage === 'moving' ? 'all 1.5s ease-in-out' : 'all 1s ease-in-out',
+            transition: stage === 'moving' ? 'width 1.8s ease-in-out, height 1.8s ease-in-out' : 'none',
             animation: stage === 'moving' 
-              ? 'slide-to-corner 1.5s ease-in-out forwards' 
+              ? 'slide-to-corner-smooth 1.8s ease-in-out forwards' 
               : stage === 'initial' || stage === 'transforming'
               ? 'none'
               : 'none',
@@ -144,7 +144,7 @@ export default function AnimatedChatEntrance({ onAnimationComplete }: AnimatedCh
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(8px); }
         }
-        @keyframes slide-to-corner {
+        @keyframes slide-to-corner-smooth {
           0% {
             top: 50%;
             left: 50%;
@@ -161,12 +161,10 @@ export default function AnimatedChatEntrance({ onAnimationComplete }: AnimatedCh
         
         /* Mobile optimizations */
         @media (max-width: 640px) {
-          @keyframes slide-to-corner {
+          @keyframes slide-to-corner-smooth {
             0% {
               top: 50%;
               left: 50%;
-              width: 140px;
-              height: 140px;
               transform: translate(-50%, -50%);
             }
             100% {
@@ -174,8 +172,6 @@ export default function AnimatedChatEntrance({ onAnimationComplete }: AnimatedCh
               left: auto;
               bottom: 16px;
               right: 16px;
-              width: 56px;
-              height: 56px;
               transform: none;
             }
           }

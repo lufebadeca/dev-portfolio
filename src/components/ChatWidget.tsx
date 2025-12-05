@@ -7,17 +7,18 @@ import AnimatedChatEntrance from '@/components/AnimatedChatEntrance';
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 export default function ChatWidget() {
+    const { language } = useLanguage();
+    const t = translations[language];
+    
     const [isChatOpen, setIsChatOpen] = useState(false);
   const [showAnimation, setShowAnimation] = useState(true);
   const [hasPlayedAnimation, setHasPlayedAnimation] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'model', text: "Hello! I'm Luis Fernando's assistant. How can I help you today? I can take you to his projects or tell you about his experience." }
+    { role: 'model', text: t.chat.initialMessage }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-    const { language } = useLanguage();
-    const t = translations[language];
 
   const SYSTEM_PROMPT_ES = `
 Eres el asistente virtual IA del portafolio de "Luis Fernando  Dev".
@@ -353,7 +354,7 @@ const SYSTEM_PROMPT = language==="en" ? SYSTEM_PROMPT_EN : SYSTEM_PROMPT_ES;
             <div className="p-3 bg-slate-800 border-t border-slate-700 flex gap-2">
               <input 
                 type="text" 
-                placeholder="Pregunta algo..." 
+                placeholder={t.chat.placeholder}
                 className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-primary transition-colors"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}

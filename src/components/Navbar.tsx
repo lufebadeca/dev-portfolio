@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import LanguageSuggestion from "@/components/LanguageSuggestion";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/data/translations";
@@ -42,6 +43,7 @@ export function Navbar() {
         isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : ""
       }`}
     >
+      <LanguageSuggestion />
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <motion.div
