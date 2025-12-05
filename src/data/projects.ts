@@ -128,15 +128,15 @@ export const projects: Project[] = [
     id: 3,
     title: {
       en: "Loan and Investment Calculator", 
-      es: "Calculadora de préstamos y inversiones"
+      es: "Calculadora de préstamos e inversiones"
     },
     shortDescription: {
       en: "Loan and investment calculator with amortization table",
-      es: "Calculadora de préstamos y inversiones con tabla de amortización"
+      es: "Calculadora de préstamos e inversiones con tabla de amortización"
     },
     description: {
       en: "A loan and investment calculator built with HTML, CSS and Vanilla JS ",
-      es: "Una calculadora de préstamos y inversiones con tabla de amortización"
+      es: "Una calculadora de préstamos e inversiones con tabla de amortización"
     },
     thumbnail: project3,
     images: [project3, project3a],

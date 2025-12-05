@@ -20,7 +20,7 @@ const technologies = [
   { name: "Bolt", logo: "/bolt_logo.webp" },
   { name: "Lovable", logo: "/lovable_logo.webp" },
   { name: "Cursor", logo: "/cursor_logo.webp" },
-  { name: "Windsurf", logo: "/windsurf_logo.webp" },
+  { name: "Windsurf", logo: "/windsurf_logo.jpeg" },
 ];
 
 export function TechCarousel() {
@@ -44,22 +44,22 @@ export function TechCarousel() {
         </motion.div>
 
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll py-4">
+          <div className="flex py-4" style={{ animation: 'scroll 15s linear infinite' }} data-mobile-scroll>
             {[...technologies].map((tech, index) => (
               <motion.div
                 key={index}
-                className="flex-shrink-0 mx-4"
+                className="flex-shrink-0 mx-2 sm:mx-4"
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="bg-card rounded-2xl p-6 shadow-lg border border-border min-w-[160px]">
-                  <div className="flex justify-center items-center h-16">
+                <div className="bg-card rounded-lg sm:rounded-2xl p-3 sm:p-6 shadow-lg border border-border min-w-[120px] sm:min-w-[160px]">
+                  <div className="flex justify-center items-center h-12 sm:h-16">
                     <img 
                       src={tech.logo} 
                       alt={tech.name} 
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
-                  <div className="text-sm font-semibold text-center mt-2">{tech.name}</div>
+                  <div className="text-xs sm:text-sm font-semibold text-center mt-1 sm:mt-2">{tech.name}</div>
                 </div>
               </motion.div>
             ))}
@@ -67,28 +67,64 @@ export function TechCarousel() {
         </div>
 
         <div className="mt-12 relative overflow-hidden">
-          <div className="flex animate-reverse-scroll py-4">
+          <div className="flex py-4" style={{ animation: 'reverse-scroll 15s linear infinite' }} data-mobile-reverse-scroll>
             {[...technologies].reverse().map((tech, index) => (
               <motion.div
                 key={index}
-                className="flex-shrink-0 mx-4"
+                className="flex-shrink-0 mx-2 sm:mx-4"
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="bg-card rounded-2xl p-6 shadow-lg border border-border min-w-[160px]">
-                  <div className="flex justify-center items-center h-16">
+                <div className="bg-card rounded-lg sm:rounded-2xl p-3 sm:p-6 shadow-lg border border-border min-w-[120px] sm:min-w-[160px]">
+                  <div className="flex justify-center items-center h-12 sm:h-16">
                     <img 
                       src={tech.logo} 
                       alt={tech.name} 
                       className="max-h-full max-w-full object-contain"
                     />
                   </div>
-                  <div className="text-sm font-semibold text-center mt-2">{tech.name}</div>
+                  <div className="text-xs sm:text-sm font-semibold text-center mt-1 sm:mt-2">{tech.name}</div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-100% - 1rem)); }
+        }
+        
+        @keyframes reverse-scroll {
+          0% { transform: translateX(calc(-100% + 1rem)); }
+          100% { transform: translateX(0); }
+        }
+        
+        [data-mobile-scroll],
+        [data-mobile-reverse-scroll] {
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+        
+        @media (min-width: 641px) {
+          [data-mobile-scroll] {
+            animation: scroll 40s linear infinite !important;
+          }
+          [data-mobile-reverse-scroll] {
+            animation: reverse-scroll 40s linear infinite !important;
+          }
+        }
+        
+        @media (max-width: 640px) {
+          [data-mobile-scroll] {
+            animation: scroll 15s linear infinite !important;
+          }
+          [data-mobile-reverse-scroll] {
+            animation: reverse-scroll 15s linear infinite !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

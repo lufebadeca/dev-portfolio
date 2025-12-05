@@ -2,13 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Send, MessageCircle, X, ExternalLink, Github, Linkedin, Mail, ChevronDown, Bot, User, Code, Briefcase } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { translations } from '@/data/translations';
+import AnimatedChatEntrance from '@/components/AnimatedChatEntrance';
 
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 export default function ChatWidget() {
     const [isChatOpen, setIsChatOpen] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(true);
+  const [hasPlayedAnimation, setHasPlayedAnimation] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'model', text: '¡Hola! Soy el asistente de Luis Fernando. ¿En qué puedo ayudarte hoy? Puedo llevarte a sus proyectos o contarte sobre él y su experiencia.' }
+    { role: 'model', text: "Hello! I'm Luis Fernando's assistant. How can I help you today? I can take you to his projects or tell you about his experience." }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -16,7 +19,7 @@ export default function ChatWidget() {
     const { language } = useLanguage();
     const t = translations[language];
 
-  const SYSTEM_PROMPT = `
+  const SYSTEM_PROMPT_ES = `
 Eres el asistente virtual IA del portafolio de "Luis Fernando  Dev".
 Tu objetivo es responder preguntas sobre la experiencia, habilidades y proyectos de Luis Fernando basándote EXCLUSIVAMENTE en la información proporcionada abajo.
 
@@ -53,12 +56,64 @@ Usuario: "Muéstrame sus proyectos"
 Tú: "Luis Fernando ha trabajado en proyectos como Bauly AI y Neat English. Puedes ver más detalles en la sección de [Proyectos](#projects)."
 `;
 
+const SYSTEM_PROMPT_EN = `
+You are the AI virtual assistant for the portfolio of "Luis Fernando Dev".
+Your goal is to answer questions about Luis Fernando's experience, skills, and projects based EXCLUSIVELY on the information provided below.
+
+BEHAVIOR RULES (IMPORTANT):
+1. DO NOT invent information. If you don't know the answer based on the context, say "I'm sorry, I don't have information about that in this portfolio."
+2. Be concise, professional, and polite.
+3. If the user asks for specific sections, provide the link in Markdown format: [Link text](#section_id).
+4. Available section IDs: #home (Home), #technologies (Technologies), #projects (Projects), #experience (Experience), #about (About), #contact (Contact).
+
+LUIS' INFORMATION:
+- Profile: ${t.about.paragraph1, t.about.paragraph2, t.about.paragraph3, t.about.paragraph4}
+- Location: Barranquilla, Colombia.
+- Availability: Open to freelance and full-time opportunities.
+- Skills: JavaScript, TypeScript, React, Tailwind CSS, Node.js, Firebase, Python, Gemini API.
+- Featured Projects:
+  1. "Bauly AI": A niche-collecting platform with social features.
+  2. "Neat English": An English learning platform focused on pronunciation for Spanish speakers.
+  3. "Loan/Credit Projector": a web app to calculate and project total amounts and loan/installment schedules.
+  4. "Hangman": Multi-theme word game.
+- Contact: email: lufebadeca@gmail.com, LinkedIn: https://www.linkedin.com/in/fernando-baldovino-bdc GitHub: https://github.com/lufebadeca
+- Other interests: hiking, ecotourism, diving, outdoor exercise
+
+EXAMPLE RESPONSES:
+User: "How can I contact Luis Fernando?"
+You: "You can email lufebadeca@gmail.com or visit the [Contact](#contact) section."
+
+User: "What technologies does he master?"
+You: "Luis Fernando is proficient in JavaScript, TypeScript, React, Tailwind CSS, Node.js, Next.js, Firebase, Supabase and MongoDB. You can find more details in the [Technologies](#technologies) section."
+
+User: "Tell me about his work experience"
+You: ${t.experience.jobs.map(job => `- ${job.title} at ${job.company} (${job.period})`).join('\n')} You can find more details in the [Experience](#experience) section."
+
+User: "Show me his projects"
+You: "Luis Fernando has worked on projects like Bauly AI and Neat English. You can find more details in the [Projects](#projects) section."
+`;
+
+// Use the English system prompt as the active system instruction
+const SYSTEM_PROMPT = language==="en" ? SYSTEM_PROMPT_EN : SYSTEM_PROMPT_ES;
+
   // Auto-scroll al final del chat
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const toggleChat = () => setIsChatOpen(!isChatOpen);
+  const handleAnimationComplete = () => {
+    setShowAnimation(false);
+    setHasPlayedAnimation(true);
+  };
+
+  const replayAnimation = () => {
+    setShowAnimation(true);
+  };
+
+  const toggleChat = () => {
+    if (showAnimation) return; // Prevent opening chat while animation is playing
+    setIsChatOpen(!isChatOpen);
+  };
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -315,10 +370,18 @@ Tú: "Luis Fernando ha trabajado en proyectos como Bauly AI y Neat English. Pued
           </div>
         )}
 
+        {/* Animation Overlay */}
+        {showAnimation && (
+          <AnimatedChatEntrance onAnimationComplete={handleAnimationComplete} />
+        )}
+
         {/* Toggle Button */}
         <button 
           onClick={toggleChat}
-          className={`${isChatOpen ? 'bg-slate-700' : 'bg-primary/70 hover:bg-primary/80'} text-white p-4 rounded-full shadow-lg shadow-teal-500/30 transition-all duration-300 transform hover:scale-110 flex items-center justify-center`}
+          className={`${isChatOpen ? 'bg-slate-700' : 'bg-primary/70 hover:bg-primary/80'} text-white p-4 rounded-full shadow-lg shadow-teal-500/30 transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
+            showAnimation ? 'cursor-not-allowed opacity-50' : ''
+          }`}
+          disabled={showAnimation}
         >
            {isChatOpen ? <X size={24} /> :<img src="/chatbot.webp" alt="Chatbot" width={24} height={24} />} {/* <MessageCircle size={24} fill="currentColor" />} */}
         </button>
