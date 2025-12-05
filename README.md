@@ -1,5 +1,3 @@
----
-
 # 🚀 Dev-Portfolio: Single-Page Application with Integrated Gemini AI Assistant
 
 ## 🇬🇧 English
@@ -161,5 +159,3 @@ El agente responde solo con los datos del `SYSTEM_PROMPT`.
 ## 📄 License
 
 This project is open-source and available under the **MIT License**.
-
----
