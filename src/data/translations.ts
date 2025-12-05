@@ -198,8 +198,8 @@ export const translations = {
       ],
       skillCategories: [
         { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-        { category: "Backend", items: ["Node.js", "Express", "GraphQL", "REST APIs"] },
-        { category: "Bases de Datos", items: ["PostgreSQL", "MongoDB", "Firebase", "Convex"] },
+        { category: "Backend", items: ["Node.js", "Express", "Firebase", "Supabase", "REST APIs", "Convex"] },
+        { category: "Databases", items: ["PostgreSQL", "MongoDB", "Firebase", "Supabase", "Convex"] },
         { category: "DevOps", items: ["Docker", "Git", "CI/CD", "Azure DevOps"] },
         { category: "Herramientas IA", items: ["Bolt", "Lovable", "Cursor", "Windsurf"] },
       ],
