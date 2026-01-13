@@ -181,7 +181,7 @@ export const translations = {
         {
           title: "Desarrollador Full-Stack",
           company: "Mapptech SAS",
-          period: "2025 - Presente",
+          period: "Jun2025 - Presente",
            responsibilities: [
             "Desarrollo y mantengo aplicaciones web escalables utilizando React, TypeScript, Tailwind CSS, Next.js, Node.js, PostgreSQL y Convex, implementando codificación asistida por IA.",
             "Contribuí al desarrollo de una plataforma de gestión catastral con un visor geoespacial integrado, con capas de UI de alto rendimiento para la consulta de datos de propiedad.",
@@ -206,7 +206,7 @@ export const translations = {
         {
           title: "Tutor de programación básica",
           company: "Tech centre",
-          period: "2025 - Presente",
+          period: "May 2025 - Presente",
           responsibilities: [
             "Brindo acompañamiento individual y grupal a estudiantes en el desarrollo de sus proyectos de programación con JS y React",
             "Mentoría técnica, apoyo en debugging y ocasional liderazgo de clases para reforzar conceptos clave.",
@@ -216,7 +216,7 @@ export const translations = {
         {
           title: "Desarrollador Freelance",
           company: "Independiente",
-          period: "2025 - Presente",
+          period: "Nov 2025 - Presente",
           responsibilities: [
             "Creé interfaces de usuario responsivas con React y Next.js",
             "Implementé sistemas de diseño modernos usando Tailwind CSS",
