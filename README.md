@@ -1,73 +1,161 @@
-# Welcome to your Lovable project
+# 🚀 Dev-Portfolio: Single-Page Application with Integrated Gemini AI Assistant
 
-## Project info
+## 🇬🇧 English
 
-**URL**: https://lovable.dev/projects/932b7e2f-dff3-46b8-afb3-372d0cb7a34b
+### Introduction
 
-## How can I edit this code?
+This repository hosts a modern, single-page professional developer portfolio built with **React** and styled using **Tailwind CSS**. It is designed to be sleek, fully responsive, and easy to navigate.
 
-There are several ways of editing your application.
+The standout feature is the **Mini AI Agent integrated via the Gemini API**. This agent is contextually aware of the portfolio's content (skills, projects, experience, and local section URLs) and provides users with quick, factual answers and direct navigation links, ensuring an enhanced and interactive user experience.
 
-**Use Lovable**
+### Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/932b7e2f-dff3-46b8-afb3-372d0cb7a34b) and start prompting.
+* **Single-Page Architecture (SPA):** Fast loading and smooth internal navigation between sections (`#about`, `#projects`, `#contact`).
+* **Fully Responsive Design:** Optimized for mobile, tablet, and desktop viewing.
+* **Gemini Mini-Agent:**
 
-Changes made via Lovable will be committed automatically to this repo.
+  * **Provide Factual Answers:** Responds only with the information included in its system prompt.
+  * **Prevent Hallucinations:** Uses persistent system instructions and low temperature (`0.3`) to ensure strict adherence to portfolio data.
+  * **Quick Navigation:** Generates clickable local links (e.g., `[Go to Contact](#contact)`).
+* **Modular React Components:** Clean, maintainable code structure.
 
-**Use your preferred IDE**
+### Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* **Frontend Framework:** React
+* **Styling:** Tailwind CSS
+* **AI Integration:** Gemini API (`gemini-2.5-flash-preview-09-2025`)
+* **Icons:** Lucide React
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## ⚙️ Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Follow these steps to set up the project locally:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 1. Clone the repository
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone https://github.com/lufebadeca/dev-portfolio.git
+cd dev-portfolio
 ```
 
-**Edit a file directly in GitHub**
+### 2. Install dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm install
+# or
+yarn install
+```
 
-**Use GitHub Codespaces**
+### 3. Run the application
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🤖 AI Agent Configuration
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The Gemini Mini-Agent requires an API Key to function.
 
-## How can I deploy this project?
+**Note:**
+In the demo, the API key is entered directly into the UI for testing.
+For production, always use a secure backend/proxy.
 
-Simply open [Lovable](https://lovable.dev/projects/932b7e2f-dff3-46b8-afb3-372d0cb7a34b) and click on Share -> Publish.
+### 1. Obtain a Key
 
-## Can I connect a custom domain to my Lovable project?
+Get your API key from **Google AI Studio**.
 
-Yes, you can!
+### 2. Insert Key
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Run the application and paste your key into the input field at the top of the widget.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 3. Start Chatting
+
+The agent will answer using only the static data defined in its `SYSTEM_PROMPT`.
+
+---
+
+# 🇪🇸 Español
+
+### Introducción
+
+Este repositorio aloja un portafolio de desarrollador profesional moderno de una sola página, construido con **React** y estilizado con **Tailwind CSS**. Está diseñado para ser elegante, completamente responsivo y fácil de navegar.
+
+La característica destacada es el **Mini Agente IA integrado mediante la API de Gemini**, que conoce el contexto del portafolio (habilidades, proyectos, experiencia y URLs locales) y proporciona respuestas rápidas y fácticas, además de enlaces de navegación directa.
+
+### Características Principales
+
+* **Arquitectura de Página Única (SPA):** Navegación fluida entre secciones (`#about`, `#projects`, `#contact`).
+* **Diseño Totalmente Responsivo:** Para móviles, tabletas y ordenadores.
+* **Mini-Agente Gemini:**
+
+  * **Respuestas Factuales:** Solo con la información del prompt del sistema.
+  * **Prevención de Alucinaciones:** Instrucción persistente y baja temperatura (`0.3`).
+  * **Navegación Rápida:** Enlaces locales clicables (ej.: `[Ir a Contacto](#contact)`).
+* **Componentes Modulares:** Código limpio dentro de un único archivo.
+
+### Stack Tecnológico
+
+* **Framework Frontend:** React
+* **Estilos:** Tailwind CSS
+* **Integración IA:** Gemini API (`gemini-2.5-flash-preview-09-2025`)
+* **Iconos:** Lucide React
+
+---
+
+## ⚙️ Primeros Pasos
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/lufebadeca/dev-portfolio.git
+cd dev-portfolio
+```
+
+### 2. Instalar dependencias
+
+```bash
+npm install
+# o
+yarn install
+```
+
+### 3. Ejecutar la aplicación
+
+```bash
+npm run dev
+# o
+yarn dev
+```
+
+---
+
+## 🤖 Configuración del Agente IA
+
+El Mini-Agente de Gemini requiere una **Clave API**.
+
+**Nota:**
+En el demo, la clave se introduce directamente en la interfaz solo para pruebas.
+En producción, usa siempre un backend/proxy seguro.
+
+### 1. Obtener una clave
+
+Disponible en **Google AI Studio**.
+
+### 2. Insertar clave
+
+Ejecuta la aplicación e introduce la clave en el widget.
+
+### 3. Comenzar a chatear
+
+El agente responde solo con los datos del `SYSTEM_PROMPT`.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
