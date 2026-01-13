@@ -43,18 +43,32 @@ export const translations = {
         {
           title: "Full-Stack developer",
           company: "Mapptech SAS",
-          period: "2025 - currently",
+          period: "Jun 2025 - currently",
           responsibilities: [
-            "Developed scalable web applications using React, Node.js, Next.js, PostgreSQL, and Convex.",
-            "Integrated AI tools to accelerate the development workflow by 40%.",
-            "Participated in sprint planning cycles as a Full-Stack Developer in an Agile team.",
-            "Implemented CI/CD pipelines using Docker and GitHub Actions."
+            "Developed and maintained scalable web applications using React, TypeScript, Tailwind CSS, Next.js, Node.js, PostgreSQL, and Convex, implementing AI-assisted coding.",
+            "Contributed to the development of a cadastral management platform with an integrated geospatial viewer, building high-performance UI layers for property data consultation.",
+            "Translated Figma mockups into high-fidelity, production-ready views, ensuring visual accuracy, usability, and consistency with design specifications.",
+            "Built reusable and optimized custom React components leveraging Mapptech’s internal component library, including paginated and performance-optimized data views.",
+            "Implemented relational and state-synchronus DB such as Postgres and Convex",
+            "Participated in sprint planning and agile ceremonies as a full-stack developer within a collaborative team environment.",
+          ],
+        },
+        {
+          title: "Co-founder | Full-Stack developer",
+          company: "Bauly AI",
+          period: "Feb 2025 - currently",
+          responsibilities: [
+            "Co-founded an AI-powered collectibles platform built with Next.js, TypeScript, and Supabase (BaaS: PostgreSQL, Auth, Storage)",
+            "Led full-stack development, including database design, authentication, project architecture and routing system, and social features.",
+            "Implemented AI-assisted item cataloging from images using generative AI.",
+            "Designed scalable schemas supporting multiple collectible categories.",
+            "Managed deployment and production workflows on Vercel, configuring a custom domain, and managing production CI builds for the main branch."
           ],
         },
         {
           title: "Programming Tutor",
           company: "Tech centre",
-          period: "2025 - currently",
+          period: "May 2025 - currently",
           responsibilities: [
             "Provided individual and group support to students in developing their programming projects with JS and React.",
             "Offered technical mentoring, debugging support, and occasional class leadership to reinforce key concepts.",
@@ -64,7 +78,7 @@ export const translations = {
         {
           title: "Freelance Developer",
           company: "Independent",
-          period: "2025 - currently",
+          period: "Nov 2023 - currently",
           responsibilities: [
             "Created responsive user interfaces with React and Next.js",
             "Implemented modern design systems using Tailwind CSS",
@@ -87,7 +101,7 @@ export const translations = {
       paragraph1: "I'm a passionate Full-Stack JavaScript Developer with over 1 year of experience building modern web applications using agile methodologies and colaborative environments such as Github and Azure Devops. My expertise spans the entire JavaScript ecosystem, from crafting intuitive user interfaces with React and Next.js to developing robust backend services with Node.js.",
       paragraph2: "I specialize in creating scalable, production-ready applications using cutting-edge technologies. My experience includes working with various databases (PostgreSQL, MongoDB, Firestore, Convex), implementing real-time features, and integrating third-party services.",
       paragraph3: "What sets me apart is my ability to leverage AI-powered development tools like Bolt, Lovable, Cursor, and Windsurf to accelerate development workflows while maintaining high code quality. I'm also familiar with Docker containerization.",
-      paragraph4: "When I'm not coding, I enjoy contributing to open-source projects, staying updated with the latest web technologies, and sharing my knowledge through technical workshops and mentoring.",
+      paragraph4: "When I'm not coding, I enjoy outdoor activities such as scuba diving and hiking, and exploring nature.",
       stats: {
         experience: "Years Experience",
         projects: "Projects Completed",
@@ -162,17 +176,31 @@ export const translations = {
       title: "Experiencia y Habilidades",
       subtitle: "Trayectoria profesional y experiencia técnica",
       workExperience: "Experiencia Laboral",
-      technicalSkills: "Habilidades Técnicas",
+      technicalSkills: "Habilidades Técnicas",        
       jobs: [
         {
           title: "Desarrollador Full-Stack",
           company: "Mapptech SAS",
           period: "2025 - Presente",
+           responsibilities: [
+            "Desarrollo y mantengo aplicaciones web escalables utilizando React, TypeScript, Tailwind CSS, Next.js, Node.js, PostgreSQL y Convex, implementando codificación asistida por IA.",
+            "Contribuí al desarrollo de una plataforma de gestión catastral con un visor geoespacial integrado, con capas de UI de alto rendimiento para la consulta de datos de propiedad.",
+            "Transformo mockups de Figma en vistas de alta fidelidad listas para producción, asegurando la precisión visual, usabilidad y consistencia con las especificaciones de diseño.",
+            "Construyo componentes de React personalizados, reutilizables y optimizados, aprovechando la librería interna, incluyendo vistas de datos paginadas y optimizadas para el rendimiento.",
+            "Implementé bases de datos relacionales y de sincronización de estado como PostgreSQL y Convex.",
+            "Participé en la planificación de sprints y ceremonias ágiles como desarrollador full-stack dentro de un entorno de equipo colaborativo.",
+          ],
+        },
+        {
+          title: "Co-fundador | Desarrollador Full-Stack",
+          company: "Bauly AI",
+          period: "Feb 2025 - actualmente",
           responsibilities: [
-            "Desarrollé aplicaciones web escalables usando React, Node.js, Next.js y PostgreSQL y Convex",
-            "Integré herramientas de IA para acelerar el flujo de trabajo de desarrollo en un 40%",
-            "Participé en la planificación de diversos ciclos de sprints como desarrollador full-stack en un equipo ágil",
-            "Implementé pipelines de CI/CD con Docker y GitHub Actions",
+            "Co-fundé una plataforma de coleccionables impulsada por IA construida con Next.js, TypeScript y Supabase (BaaS: PostgreSQL, Auth, Storage)",
+            "Lideré el desarrollo full-stack, incluyendo diseño de base de datos, autenticación, arquitectura del proyecto y sistema de enrutamiento, y funciones sociales.",
+            "Implementé catalogación de ítems asistida por IA a partir de imágenes usando IA generativa.",
+            "Diseñé esquemas escalables que soportan múltiples categorías de coleccionables.",
+            "Gestioné despliegues y flujos de trabajo de producción en Vercel, configurando un dominio personalizado y gestionando builds de CI para la rama principal."
           ],
         },
         {
@@ -211,7 +239,7 @@ export const translations = {
       paragraph1: "Soy un Desarrollador Full-Stack JavaScript apasionado con más de 1 año de experiencia construyendo aplicaciones web modernas usando metodologías ágiles y entornos colaborativos como Github y Azure Devops. Mi experiencia abarca todo el ecosistema de JavaScript, desde la creación de interfaces de usuario intuitivas con React y Next.js hasta el desarrollo de servicios backend robustos con Node.js.",
       paragraph2: "Me especializo en crear aplicaciones escalables y listas para producción usando tecnologías de vanguardia. Mi experiencia incluye trabajar con varias bases de datos (PostgreSQL, MongoDB, Firestore, Convex), implementar funciones en tiempo real e integrar servicios de terceros.",
       paragraph3: "Lo que me distingue es mi capacidad para aprovechar herramientas de desarrollo impulsadas por IA como Bolt, Lovable, Cursor y Windsurf para acelerar los flujos de trabajo de desarrollo manteniendo alta calidad de código. También estoy familiarizado con contenedorización con Docker.",
-      paragraph4: "Cuando no estoy programando, disfruto contribuir a proyectos de código abierto, mantenerme actualizado con las últimas tecnologías web y compartir mi conocimiento a través de publicaciones de talleres técnicos y mentoría.",
+      paragraph4: "Cuando no estoy programando, disfruto de hacer actividades al aire libre como buceo y senderismo y explorar la naturaleza.",
       stats: {
         experience: "Años de Experiencia",
         projects: "Proyectos Completados",
