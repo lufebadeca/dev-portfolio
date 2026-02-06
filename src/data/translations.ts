@@ -49,7 +49,8 @@ export const translations = {
             "Contributed to the development of a cadastral management platform with an integrated geospatial viewer, building high-performance UI layers for property data consultation.",
             "Translated Figma mockups into high-fidelity, production-ready views, ensuring visual accuracy, usability, and consistency with design specifications.",
             "Built reusable and optimized custom React components leveraging Mapptech’s internal component library, including paginated and performance-optimized data views.",
-            "Implemented relational and state-synchronus DB such as Postgres and Convex",
+            "Built complex data validation and state management systems for multi-step administrative processes including request and property registration, clerk asignation, and document handling",
+            "Implemented relational and state-synchronous data models synchronized through different services that satisfy the business model needs across the entire application",
             "Participated in sprint planning and agile ceremonies as a full-stack developer within a collaborative team environment.",
           ],
         },
@@ -88,7 +89,7 @@ export const translations = {
       ],
       skillCategories: [
         { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn"] },
-        { category: "Backend", items: ["Node.js", "Express", "Firebase", "Supabase", "REST APIs", "Convex"] },
+        { category: "Backend", items: ["Node.js", "Express", "Firebase", "Supabase", "REST APIs", "Convex", "x-state", "Effect"] },
         { category: "Databases", items: ["PostgreSQL", "MongoDB", "Firebase", "Supabase", "Convex"] },
         { category: "DevOps", items: ["Docker", "Git", "Azure DevOps", "CI/CD"] },
         { category: "AI Tools", items: ["Bolt", "Lovable", "Cursor", "Windsurf"] },
@@ -187,7 +188,8 @@ export const translations = {
             "Contribuí al desarrollo de una plataforma de gestión catastral con un visor geoespacial integrado, con capas de UI de alto rendimiento para la consulta de datos de propiedad.",
             "Transformo mockups de Figma en vistas de alta fidelidad listas para producción, asegurando la precisión visual, usabilidad y consistencia con las especificaciones de diseño.",
             "Construyo componentes de React personalizados, reutilizables y optimizados, aprovechando la librería interna, incluyendo vistas de datos paginadas y optimizadas para el rendimiento.",
-            "Implementé bases de datos relacionales y de sincronización de estado como PostgreSQL y Convex.",
+            "Desarrollo sistemas de validación y manejo de estado para trámites administrativos multi-proceso que incluyen registro de solicitud, asignación de propiedad, asignación de funcionarios, manejos de documentos."
+            "Implemento modelos de datos relacionales y sincrónicos con el estado (Postgres, Convex, Typesense) sincronizados a través de diferentes servicios para las necesidades del modelo de negocio.",
             "Participé en la planificación de sprints y ceremonias ágiles como desarrollador full-stack dentro de un entorno de equipo colaborativo.",
           ],
         },
@@ -226,7 +228,7 @@ export const translations = {
       ],
       skillCategories: [
         { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-        { category: "Backend", items: ["Node.js", "Express", "Firebase", "Supabase", "REST APIs", "Convex"] },
+        { category: "Backend", items: ["Node.js", "Express", "Firebase", "Supabase", "REST APIs", "Convex", "x-state", "Effect"] },
         { category: "Databases", items: ["PostgreSQL", "MongoDB", "Firebase", "Supabase", "Convex"] },
         { category: "DevOps", items: ["Docker", "Git", "CI/CD", "Azure DevOps"] },
         { category: "Herramientas IA", items: ["Bolt", "Lovable", "Cursor", "Windsurf"] },
