@@ -188,7 +188,7 @@ export const translations = {
             "Contribuí al desarrollo de una plataforma de gestión catastral con un visor geoespacial integrado, con capas de UI de alto rendimiento para la consulta de datos de propiedad.",
             "Transformo mockups de Figma en vistas de alta fidelidad listas para producción, asegurando la precisión visual, usabilidad y consistencia con las especificaciones de diseño.",
             "Construyo componentes de React personalizados, reutilizables y optimizados, aprovechando la librería interna, incluyendo vistas de datos paginadas y optimizadas para el rendimiento.",
-            "Desarrollo sistemas de validación y manejo de estado para trámites administrativos multi-proceso que incluyen registro de solicitud, asignación de propiedad, asignación de funcionarios, manejos de documentos."
+            "Desarrollo sistemas de validación y manejo de estado para trámites administrativos multi-proceso que incluyen registro de solicitud, asignación de propiedad, asignación de funcionarios, manejos de documentos.",
             "Implemento modelos de datos relacionales y sincrónicos con el estado (Postgres, Convex, Typesense) sincronizados a través de diferentes servicios para las necesidades del modelo de negocio.",
             "Participé en la planificación de sprints y ceremonias ágiles como desarrollador full-stack dentro de un entorno de equipo colaborativo.",
           ],
