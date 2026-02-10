@@ -7,6 +7,7 @@ export const translations = {
       projects: "Projects",
       experience: "Experience",
       about: "About",
+      video: "Video",
       contact: "Contact",
     },
     // Hero
@@ -123,6 +124,13 @@ export const translations = {
       successTitle: "Message sent!",
       successDescription: "Thank you for reaching out. I'll get back to you soon.",
     },
+    // Video
+    video: {
+      title: "My Story",
+      subtitle: "Watch my journey and inspiration",
+      playVideo: "Play Video",
+      description: "A short video about my passion for web development and my journey in the tech industry.",
+    },
     // Chat
     chat: {
       initialMessage: "Hello! I'm Luis Fernando's assistant. How can I help you today? I can take you to his projects or tell you about his experience.",
@@ -144,6 +152,7 @@ export const translations = {
       technologies: "Tecnologías",
       projects: "Proyectos",
       experience: "Experiencia",
+      video: "Video",
       about: "Acerca de",
       contact: "Contacto",
     },
@@ -260,6 +269,13 @@ export const translations = {
       sending: "Enviando...",
       successTitle: "¡Mensaje enviado!",
       successDescription: "Gracias por contactarme. Te responderé pronto.",
+    },
+    // Video
+    video: {
+      title: "Mi Historia",
+      subtitle: "Mira mi viaje e inspiración",
+      playVideo: "Reproducir Video",
+      description: "Un video corto sobre mi pasión por el desarrollo web y mi viaje en la industria tecnológica.",
     },
     // Chat
     chat: {

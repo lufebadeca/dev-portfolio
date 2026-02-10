@@ -28,6 +28,7 @@ export function Navbar() {
     { href: "#projects", label: t.projects },
     { href: "#experience", label: t.experience },
     { href: "#about", label: t.about },
+    { href: "#video", label: t.video },
     { href: "#contact", label: t.contact },
   ];
 

@@ -4,6 +4,7 @@ import { TechCarousel } from "@/components/TechCarousel";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
 import { About } from "@/components/About";
+import { VideoSection } from "@/components/VideoSection";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
@@ -17,6 +18,7 @@ const Index = () => {
       <Projects />
       <Experience />
       <About />
+      <VideoSection />
       <Contact />
       <Footer />
       <ChatWidget />
